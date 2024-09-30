@@ -14,62 +14,77 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelsStructs:
   - levelNumber: 0
+    goalPoints: 0
     numberOfSpheresToSpawn: 3
     speedOfSpawnedSpheres: 0
     verticalMoving: 1
   - levelNumber: 1
+    goalPoints: 250
     numberOfSpheresToSpawn: 3
     speedOfSpawnedSpheres: 3
     verticalMoving: 1
   - levelNumber: 2
+    goalPoints: 0
     numberOfSpheresToSpawn: 3
     speedOfSpawnedSpheres: 3
     verticalMoving: 1
   - levelNumber: 3
+    goalPoints: 0
     numberOfSpheresToSpawn: 3
     speedOfSpawnedSpheres: 3
     verticalMoving: 1
   - levelNumber: 4
+    goalPoints: 0
     numberOfSpheresToSpawn: 5
     speedOfSpawnedSpheres: 3
     verticalMoving: 1
   - levelNumber: 5
+    goalPoints: 0
     numberOfSpheresToSpawn: 5
     speedOfSpawnedSpheres: 3
     verticalMoving: 1
   - levelNumber: 6
+    goalPoints: 0
     numberOfSpheresToSpawn: 5
     speedOfSpawnedSpheres: 3
     verticalMoving: 1
   - levelNumber: 7
+    goalPoints: 0
     numberOfSpheresToSpawn: 5
     speedOfSpawnedSpheres: 3
     verticalMoving: 1
   - levelNumber: 8
+    goalPoints: 0
     numberOfSpheresToSpawn: 5
     speedOfSpawnedSpheres: 3
     verticalMoving: 1
   - levelNumber: 9
+    goalPoints: 0
     numberOfSpheresToSpawn: 5
     speedOfSpawnedSpheres: 3
     verticalMoving: 1
   - levelNumber: 10
+    goalPoints: 0
     numberOfSpheresToSpawn: 7
     speedOfSpawnedSpheres: 3
     verticalMoving: 0
   - levelNumber: 11
+    goalPoints: 0
     numberOfSpheresToSpawn: 7
     speedOfSpawnedSpheres: 3
     verticalMoving: 0
   - levelNumber: 12
+    goalPoints: 0
     numberOfSpheresToSpawn: 7
     speedOfSpawnedSpheres: 3
     verticalMoving: 0
   - levelNumber: 13
+    goalPoints: 0
     numberOfSpheresToSpawn: 7
     speedOfSpawnedSpheres: 3
     verticalMoving: 0
   - levelNumber: 14
+    goalPoints: 0
     numberOfSpheresToSpawn: 7
     speedOfSpawnedSpheres: 3
     verticalMoving: 0

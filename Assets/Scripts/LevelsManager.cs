@@ -5,7 +5,7 @@ using UnityEngine;
 public class LevelsManager : MonoBehaviour
 {
     public static LevelsManager varForSingleton;
-    public GameObject mainGameCanvas;
+    public GameplayControl gameCon;
     public int choosedLevelNumber;
 
     public void Awake()
@@ -20,7 +20,8 @@ public class LevelsManager : MonoBehaviour
     {
         choosedLevelNumber = levelNumber;
 
-        mainGameCanvas.SetActive(true);
+        gameCon.enabled = true;
+        gameCon.MethodForSpawningNewSpheres();
         gameObject.SetActive(false);
     }
 }
