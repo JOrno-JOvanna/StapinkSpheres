@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15759acb387f27843a8ba0db421e343f, type: 3}
+  m_Name: NewInformationAboutLevels
+  m_EditorClassIdentifier: 
+  LevelsStructs:
+  - levelNumber: 0
+    numberOfSpheresToSpawn: 3
+    speedOfSpawnedSpheres: 0
+    verticalMoving: 1
+  - levelNumber: 1
+    numberOfSpheresToSpawn: 3
+    speedOfSpawnedSpheres: 3
+    verticalMoving: 1
+  - levelNumber: 2
+    numberOfSpheresToSpawn: 3
+    speedOfSpawnedSpheres: 3
+    verticalMoving: 1
+  - levelNumber: 3
+    numberOfSpheresToSpawn: 3
+    speedOfSpawnedSpheres: 3
+    verticalMoving: 1
+  - levelNumber: 4
+    numberOfSpheresToSpawn: 5
+    speedOfSpawnedSpheres: 3
+    verticalMoving: 1
+  - levelNumber: 5
+    numberOfSpheresToSpawn: 5
+    speedOfSpawnedSpheres: 3
+    verticalMoving: 1
+  - levelNumber: 6
+    numberOfSpheresToSpawn: 5
+    speedOfSpawnedSpheres: 3
+    verticalMoving: 1
+  - levelNumber: 7
+    numberOfSpheresToSpawn: 5
+    speedOfSpawnedSpheres: 3
+    verticalMoving: 1
+  - levelNumber: 8
+    numberOfSpheresToSpawn: 5
+    speedOfSpawnedSpheres: 3
+    verticalMoving: 1
+  - levelNumber: 9
+    numberOfSpheresToSpawn: 5
+    speedOfSpawnedSpheres: 3
+    verticalMoving: 1
+  - levelNumber: 10
+    numberOfSpheresToSpawn: 7
+    speedOfSpawnedSpheres: 3
+    verticalMoving: 0
+  - levelNumber: 11
+    numberOfSpheresToSpawn: 7
+    speedOfSpawnedSpheres: 3
+    verticalMoving: 0
+  - levelNumber: 12
+    numberOfSpheresToSpawn: 7
+    speedOfSpawnedSpheres: 3
+    verticalMoving: 0
+  - levelNumber: 13
+    numberOfSpheresToSpawn: 7
+    speedOfSpawnedSpheres: 3
+    verticalMoving: 0
+  - levelNumber: 14
+    numberOfSpheresToSpawn: 7
+    speedOfSpawnedSpheres: 3
+    verticalMoving: 0
