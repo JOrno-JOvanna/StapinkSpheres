@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ClassForSpawnControl : BaseClassForSpawnedSpheresControl
@@ -10,28 +11,37 @@ public class ClassForSpawnControl : BaseClassForSpawnedSpheresControl
     public Vector2 startPosition;
     public List<GameObject> sphereSpotsToSpawn;
 
-    public override void MethodForSpawningSpheresInSpots(int numberOfSpheresToSpawn)
+    private List<GameObject> allSpots = new();
+
+    private void Awake()
+    {
+        CacheSpots();
+    }
+
+    private void CacheSpots()
+    {
+        allSpots.Clear();
+        for (int i = 0; i < listOfSpotsForSphereSpawn.childCount; i++)
+        {
+            allSpots.Add(listOfSpotsForSphereSpawn.GetChild(i).gameObject);
+        }
+    }
+
+    protected override void MethodForSpawningSpheresInSpots(int numberOfSpheresToSpawn)
     {
         startPosition = listOfSpotsForSphereSpawn.localPosition;
 
-        for (int i = 0; i < listOfSpotsForSphereSpawn.childCount; i++)
+        foreach (var spot in allSpots)
         {
-            listOfSpotsForSphereSpawn.GetChild(i).gameObject.SetActive(false);
+            spot.SetActive(false);
         }
 
-        if (sphereSpotsToSpawn.Count != 0)
-        {
-            sphereSpotsToSpawn.Clear();
-        }
+        sphereSpotsToSpawn.Clear();
 
-        List<GameObject> newSphereSpotsToSpawn = new();
-
-        GetRandomSpheres(numberOfSpheresToSpawn, listOfSpotsForSphereSpawn.childCount, (int id, int i) =>
+        GetRandomSpheres(numberOfSpheresToSpawn, allSpots.Count, (int id, int i) =>
         {
-            newSphereSpotsToSpawn.Add(listOfSpotsForSphereSpawn.GetChild(id).gameObject);
+            sphereSpotsToSpawn.Add(allSpots[id]);
         });
-
-        sphereSpotsToSpawn = newSphereSpotsToSpawn;
 
         foreach (GameObject spot in sphereSpotsToSpawn)
         {

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -11,11 +12,15 @@ public class GameplayControl : MonoBehaviour, IPointerClickHandler
     public ClassForCountingPoints varForCountingPoints;
     public Animator gameAnimator;
     public GameObject winPanel;
+    public TextMeshProUGUI goalPoints, levelNum;
     public float timeOfChange, timeInGame, sphereSpeed;
     public bool gameplayComing;
 
     public void Update()
     {
+        goalPoints.text = spawnControl.infoAboutLevels.LevelsStructs[LevelsManager.varForSingleton.choosedLevelNumber].goalPoints.ToString();
+        levelNum.text = LevelsManager.varForSingleton.choosedLevelNumber.ToString();
+
         float dicreaseForSmoothMovingOnX = spawnControl.listOfSpotsForSphereSpawn.position.x;
         float dicreaseForSmoothMovingOnY = spawnControl.listOfSpotsForSphereSpawn.position.y;
 
@@ -81,8 +86,8 @@ public class GameplayControl : MonoBehaviour, IPointerClickHandler
 
     public void MethodForSpawningNewSpheres()
     {
-        spawnControl.MethodForSpawningSpheresInSpots(spawnControl.infoAboutLevels.LevelsStructs[LevelsManager.varForSingleton.choosedLevelNumber].numberOfSpheresToSpawn);
-        changeColorControl.MethodForSettingColorsOnSpawnedSpheres(spawnControl.infoAboutLevels.LevelsStructs[LevelsManager.varForSingleton.choosedLevelNumber].numberOfSpheresToSpawn, spawnControl.sphereSpotsToSpawn);
+        spawnControl.SpawnSpheres(spawnControl.infoAboutLevels.LevelsStructs[LevelsManager.varForSingleton.choosedLevelNumber].numberOfSpheresToSpawn);
+        changeColorControl.SpawnSpheres(spawnControl.infoAboutLevels.LevelsStructs[LevelsManager.varForSingleton.choosedLevelNumber].numberOfSpheresToSpawn, spawnControl.sphereSpotsToSpawn);
         gameplayComing = true;
         StartCoroutine(ChangeColorOfSpawnedSpheres());
     }
@@ -109,7 +114,7 @@ public class GameplayControl : MonoBehaviour, IPointerClickHandler
         {
             yield return new WaitForSecondsRealtime(timeOfChange);
 
-            changeColorControl.MethodForSettingColorsOnSpawnedSpheres(spawnControl.infoAboutLevels.LevelsStructs[LevelsManager.varForSingleton.choosedLevelNumber].numberOfSpheresToSpawn, spawnControl.sphereSpotsToSpawn);
+            changeColorControl.SpawnSpheres(spawnControl.infoAboutLevels.LevelsStructs[LevelsManager.varForSingleton.choosedLevelNumber].numberOfSpheresToSpawn, spawnControl.sphereSpotsToSpawn);
         }
     }
 }
